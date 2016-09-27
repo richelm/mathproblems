@@ -1,0 +1,8 @@
+# exclude the following file types
+*.pdf
+*.p
+*.MOOC
+*.zip
+
+# explict files
+octave-workspace
