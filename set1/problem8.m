@@ -28,11 +28,18 @@ n = ['73167176531330624919225119674426574742355349194934' ...
   '71636269561882670428252483600823257530420752963450'];
   
 l = length(n);
-d = 4; % number of adjacent digits to concider
+d = 13; % number of adjacent digits to concider
 i = 1;
-while i <= l
-  for j = i:i+d
-    s = 
-fprintf('Length of n is %d\n',l);
+max_prod = 0;
+while i <= l-d
+  ns = [];
+  for j = i:i+d-1
+    ns = [ns str2double(n(j))];
+  end
+  p = prod(ns);
+  if p > max_prod, max_prod = p; end
+  i = i + 1;
+end
+fprintf('Max product of %d adjacent digits is %d\n',d, max_prod);
 
 
