@@ -1,6 +1,7 @@
-% Intro to Programming with MATLAB
-% Homework 8, Problem 2
-% 2016.09.24
+% Problem 19
+% 2016.09.29
+%
+% Research:
 %
 % Zeller's Congruence formula to calculate day of the week h
 % Reference: https://en.wikipedia.org/wiki/Zeller%27s_congruence
@@ -13,9 +14,16 @@
 %
 % The formula adjust for leap year, so no need to check for those.
 %
-function [ mondays ] = day_counter( y )
-    q = 1;
-    mondays = 0;
+% Question: 
+% How many Sundays fell on the first of the month during the twentieth 
+% century (1 Jan 1901 to 31 Dec 2000)? 
+%
+
+q = 1;
+sundays = 0;
+y = 1901;
+while y <= 2000
+    % for each month of the year y
     for m = 3:14
         % use prior year for jan and feb according to Zeller formula
         if (m == 13 || m == 14)
@@ -27,6 +35,8 @@ function [ mondays ] = day_counter( y )
         % zeller formula to calculate the day (0..6)
         h = mod((q + floor((13*(m+1))/5) + Y + floor(Y/4) - floor(Y/100) + floor(Y/400)),7);        
             
-        if (h == 2), mondays = mondays + 1; end
+        if (h == 1), sundays = sundays + 1; end
     end
+    y = y + 1;
 end
+fprintf('Number of Sundays on first of month in twentieth century was %d\n', sundays);
