@@ -19,12 +19,12 @@ ones = {'','one','two','three','four','five','six','seven','eight','nine'};
 tens = {'','twenty','thirty','forty','fifty','sixty','seventy', ... 
         'eighty','ninety'}; 
         
-hundreds = {'onehundred','twohundred','threehundred', ... 
-        'fourhundred','fivehundred','sixhundred','sevenhundred', ... 
-        'eighthundred','ninehundred'};
+hundreds = {'onehundredand','twohundredand','threehundredand', ... 
+        'fourhundredand','fivehundredand','sixhundredand','sevenhundredand', ... 
+        'eighthundredand','ninehundredand','onethousandand'};
 
 numltrs = 0;
-for n = 1:1000        
+for n = 1:1000
     if (n < 21)
         numltrs = numltrs + length(less21{n});
     elseif (n > 20 && n < 100)
@@ -34,7 +34,9 @@ for n = 1:1000
     else
         h = floor(n/100);
         ts = n - h*100;
-        if (ts < 21)
+        if mod(n,100) == 0
+            numltrs = numltrs + length(hundreds{h}) - 3; % -3 for the and
+        elseif (ts < 21)
             numltrs = numltrs + length(hundreds{h}) + length(less21{ts});
         else
             o = mod(n,10);
