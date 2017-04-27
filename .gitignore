@@ -4,6 +4,7 @@
 *.MOOC
 *.zip
 *.jpg
+*.out
 
 # explict files
 octave-workspace
