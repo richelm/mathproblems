@@ -17,9 +17,11 @@
  * CASE 1: n and m are both even
  * 	minimum number is n/2 * m/2
  * 
- * CASE 2: n or m are odd
+ * CASE 2: n or m are odd (not both)
  *  minimum number is (n-1) * (m-1)
  * 
+ * CASE 3: n and m are both odd
+ *  minimum number is 
  */
 
 #include <stdio.h>
