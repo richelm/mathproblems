@@ -7,7 +7,7 @@
 #include <stdbool.h>
 
 /**
- * Problem: Hackerrack|Alogrithms|Warmup|Min-Max-Sum
+ * Problem: Dashboard|Alogrithms|Warmup|Simple Arrary Sum
  * 
  * Solution:
  * 
