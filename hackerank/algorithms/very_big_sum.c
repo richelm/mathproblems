@@ -7,24 +7,26 @@
 #include <stdbool.h>
 
 /**
- * Problem: Dashboard|Alogrithms|Warmup|Simple Arrary Sum
+ * Problem: Dashboard|Alogrithms|Warmup|A Very Big Sum
  * 
  * Solution:
  * Just keep a running sum as values are read in. No need to store
  * in an array.
  * 
- * Solved: 8/22/2017
+ * Solved: 8/23/2017
  * 
  */
 
 int main() {
-    int n,k,sum; 
-    sum = 0;
+    int n, i; 
+	long int k,result;
+	
+	result = 0;
     scanf("%i", &n);
-    for(int i = 0; i < n; i++){
-       scanf("%i",&k);
-       sum = sum + k;
+    for(i = 0; i < n; i++){
+		scanf("%li",&k);
+		result = result + k;
     }
-    printf("%d\n", sum);
+    printf("%ld\n", result);
     return 0;
 }

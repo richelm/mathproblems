@@ -4,7 +4,7 @@
 #include <stdlib.h>
 
 /**
- * Problem: Hackerrack|Alogrithms|Warmup|Min-Max-Sum
+ * Problem: Dashboard|Alogrithms|Warmup|Min Max Sum
  * 
  * Solution:
  * 1. Read in 5 values

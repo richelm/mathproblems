@@ -12,6 +12,8 @@
  * Solution:
  * Read in a0,a1,a2 and b0,b1,b2 and compare corresponding values.
  *
+ * Solved: 8/22/2017
+ * 
  */
 
 int main() {
