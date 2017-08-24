@@ -15,16 +15,29 @@
  * value of each fraction on a new line.
  * NOTE: Precision should be scaled to six decimal places.
  * 
- * Solved: 
+ * Solved: 8/24/2017
  * 
  */
  
 int main(){
-    int n; 
+    int n,i,k; 
+    int pos, neg, zero;
+    
     scanf("%d",&n);
-    int arr[n];
-    for(int arr_i = 0; arr_i < n; arr_i++){
-       scanf("%d",&arr[arr_i]);
+
+	pos = 0;
+	neg = 0;
+	zero = 0;
+    for(i = 0; i < n; i++){
+		scanf("%d",&k);
+		if (k > 0) {pos++;}
+		if (k < 0) {neg++;}
+		if (k == 0) {zero++;}
     }
+    
+    printf("%.6f\n",(double)pos/(double)n);
+    printf("%.6f\n",(double)neg/(double)n);
+    printf("%.6f\n",(double)zero/(double)n);
+    
     return 0;
 }
