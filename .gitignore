@@ -5,6 +5,8 @@
 *.zip
 *.jpg
 *.out
+*.tar
+*.tgz
 
 # explict files
 octave-workspace
